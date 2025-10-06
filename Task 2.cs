@@ -1,42 +1,32 @@
-﻿
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
 
-namespace  Task_2
+class Program
 {
-    internal class Program
+    static void Main(string[] args)
     {
-        static void Main(string[] args)
-        {
-            double x, y;
+        double x, y;
             bool isInArea, isConvert;
             // ввод координат x и y
             do
             {
-                Console.WriteLine("Введите координату x:");
+                Console.Write("x ? ");
                 string buf = Console.ReadLine();
                 isConvert = double.TryParse(buf, out x);
                 if (isConvert == false)
-                    Console.WriteLine("Ошибка при вводе координаты x");
+                    Console.WriteLine("Ошибка ввода x!");
             } while (isConvert == false);
 
             do
             {
-                Console.WriteLine("Введите координату y:");
+                Console.Write("y ? ");
                 string buf = Console.ReadLine();
                 isConvert = double.TryParse(buf, out y);
                 if (isConvert == false)
-                    Console.WriteLine("Ошибка при вводе переменной y");
+                    Console.WriteLine("Ошибка ввода y!");
             } while (isConvert == false);
             // проверка принадлежности точки к заданной области
-            isInArea = (5>=x && x>=0) && (2>=y && y>=0);
-            if (isInArea)
-                Console.WriteLine($"Точка ({x};{y}) принадлежит к заданной области");
-            else
-                Console.WriteLine($"Точка ({x};{y}) не принадлежит к заданной области");
-        }
+            isInArea = (5>=x && x>=0) && (1>=y && y>=0);
+            Console.WriteLine(isInArea);
+
     }
 }
