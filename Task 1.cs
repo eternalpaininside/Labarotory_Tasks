@@ -67,8 +67,9 @@ class Program
             	Console.WriteLine("Нельзя вычислить!");
     		else
             {
-    			r4 = Math.Sin(x) + Math.Pow(x, 3) + 1 / (Math.Pow(x, 2) + 1);
+    			r4 = Math.Sin(x) + Math.Pow(x, 3) + 1 / (Math.Pow(x, 2) - 1);
     			Console.WriteLine($"x = {x}, sin(x) + x^3 + 1/(x^2 - 1) = {r4}");
             }
 		}
 }
+
